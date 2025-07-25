@@ -1,15 +1,18 @@
 import React from "react";
 import Links from "./Links";
 
-function About({ bio, links }) {
+const About = () => {
+  const bio = "I am a frontend developer";
+  const github = "https://github.com/yourname";
+  const linkedin = "https://linkedin.com/in/yourname";
+
   return (
-    <div id="about">
+    <section id="about">
       <h2>About Me</h2>
-      {bio && bio.length > 1 ? <p>{bio}</p> : null}
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github={links.github} linkedin={links.linkedin} />
-    </div>
+      {bio && <p>{bio}</p>}
+      <Links github={github} linkedin={linkedin} />
+    </section>
   );
-}
+};
 
 export default About;
